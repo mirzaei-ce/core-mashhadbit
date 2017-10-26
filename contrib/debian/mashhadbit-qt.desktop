@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mashhadbit
+Comment=Mashhadbit P2P Cryptocurrency
+Comment[fr]=Mashhadbit, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Mashhadbit, eşten eşe kriptografik sanal para birimi
+Exec=mashhadbit-qt %u
+Terminal=false
+Type=Application
+Icon=mashhadbit128
+MimeType=x-scheme-handler/mashhadbit;
+Categories=Office;Finance;

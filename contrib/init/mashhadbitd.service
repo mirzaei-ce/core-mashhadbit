@@ -1,0 +1,22 @@
+[Unit]
+Description=Mashhadbit's distributed currency daemon
+After=network.target
+
+[Service]
+User=mashhadbit
+Group=mashhadbit
+
+Type=forking
+PIDFile=/var/lib/mashhadbitd/mashhadbitd.pid
+ExecStart=/usr/bin/mashhadbitd -daemon -pid=/var/lib/mashhadbitd/mashhadbitd.pid \
+-conf=/etc/mashhadbit/mashhadbit.conf -datadir=/var/lib/mashhadbitd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

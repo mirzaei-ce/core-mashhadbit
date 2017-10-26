@@ -1,0 +1,33 @@
+# /etc/conf.d/mashhadbitd: config file for /etc/init.d/mashhadbitd
+
+# Config file location
+#MASHHADBITD_CONFIGFILE="/etc/mashhadbit/mashhadbit.conf"
+
+# What directory to write pidfile to?  (created and owned by $MASHHADBITD_USER)
+#MASHHADBITD_PIDDIR="/var/run/mashhadbitd"
+
+# What filename to give the pidfile
+#MASHHADBITD_PIDFILE="${MASHHADBITD_PIDDIR}/mashhadbitd.pid"
+
+# Where to write mashhadbitd data (be mindful that the blockchain is large)
+#MASHHADBITD_DATADIR="/var/lib/mashhadbitd"
+
+# User and group to own mashhadbitd process
+#MASHHADBITD_USER="mashhadbit"
+#MASHHADBITD_GROUP="mashhadbit"
+
+# Path to mashhadbitd executable
+#MASHHADBITD_BIN="/usr/bin/mashhadbitd"
+
+# Nice value to run mashhadbitd under
+#MASHHADBITD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+MASHHADBITD_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for mashhadbitd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+MASHHADBITD_SIGTERM_TIMEOUT=60
